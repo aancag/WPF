@@ -1,0 +1,15 @@
+﻿<Window x:Class="FirstWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ItemsControl ItemsSource="{Binding roles}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Content="{Binding Path=Name}" IsChecked="{Binding Path=IsChecked}" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Command="{Binding ClickCommand}" Width="100" Height="30" Content="Select roles"/>
+    </Grid>
+</Window>
